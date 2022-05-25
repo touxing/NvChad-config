@@ -7,11 +7,19 @@ map("n", "<leader>cc", ":Telescope <CR>", ns_opt)
 map("n", "<leader>q", ":q <CR>", ns_opt)
 map("n", "<leader>ss", "<cmd> :w <CR>", ns_opt)
 
+-- 系统粘贴
+map("i", "<C-v>", "<Esc>\"+pa", ns_opt)
+
 -- toggleterm
 map("n", "<leader>tt", "<cmd>exe v:count.'ToggleTerm'<CR>")
 map("n", "<leader>tf", "<cmd>lua require('toggleterm').float_toggle()<CR>")
 map("n", "<leader>tg", "<cmd>lua require('toggleterm').lazygit_toggle()<CR>")
 map("n", "<leader>ta", "<cmd>ToggleTermToggleAll<CR>")
+-- Terminal相关
+map("n", "<leader>t", ":sp | terminal<CR>", ns_opt)
+map("n", "<leader>vt", ":vsp | terminal<CR>", ns_opt)
+map("t", "<Esc>", "<C-\\><C-n>", ns_opt)
+
 -- windows 分屏快捷键
 map("n", "<leader>sv", ":vsp<CR>", ns_opt)
 map("n", "<leader>sh", ":sp<CR>", ns_opt)
@@ -25,21 +33,17 @@ map("n", "<C-Left>", ":vertical resize -2<CR>", ns_opt)
 map("n", "<C-Right>", ":vertical resize +2<CR>", ns_opt)
 map("n", "<leader>s,", ":vertical resize -20<CR>", ns_opt)
 map("n", "<leader>s.", ":vertical resize +20<CR>", ns_opt)
+
 -- -- 上下比例
 map("n", "<leader>sj", ":resize +10<CR>", ns_opt)
 map("n", "<leader>sk", ":resize -10<CR>", ns_opt)
 map("n", "<leader><C-Down>", ":resize +2<CR>", ns_opt)
 map("n", "<leader><C-Up>", ":resize -2<CR>", ns_opt)
--- 等比例
-
--- Terminal相关
-map("n", "<leader>t", ":sp | terminal<CR>", ns_opt)
-map("n", "<leader>vt", ":vsp | terminal<CR>", ns_opt)
-map("t", "<Esc>", "<C-\\><C-n>", ns_opt)
-
 
 -- 打开大纲预览
 map("n", "<leader>2", "<cmd>Vista!!<CR>", ns_opt)
+
+map("n", "<C-p>", "<cmd> :Telescope find_files <CR>")
 
 -- require("my autocmds file") or just declare them here
 
@@ -48,7 +52,7 @@ map("n", "<leader>2", "<cmd>Vista!!<CR>", ns_opt)
 vim.u = {}
 -- 貌似不在 GUI 设置字体大小不生效
 -- vim.o.guifont="FantasqueSansMono Nerd Font:h16,CaskaydiaCove Nerd Font:h16"
-vim.o.guifont="FantasqueSansMono Nerd Font:h16"
+vim.o.guifont="FantasqueSansMono Nerd Font:h15"
 -- 高亮所在行
 vim.wo.cursorline = true
 vim.u.keymap = {
