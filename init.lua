@@ -43,7 +43,8 @@ map("n", "<leader><C-Up>", ":resize -2<CR>", ns_opt)
 -- 打开大纲预览
 map("n", "<leader>2", "<cmd>Vista!!<CR>", ns_opt)
 
--- map("n", "<C-p>", "<cmd> :Telescope find_files <CR>", ns_opt)
+-- 搜索文件
+map("n", "<C-p>", "<cmd> :Telescope find_files <CR>", ns_opt)
 
 -- 搜索并跳转到单词
 map("n", "<leader>gw", "<cmd>HopWord<CR>", ns_opt)
