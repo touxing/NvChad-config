@@ -43,7 +43,14 @@ map("n", "<leader><C-Up>", ":resize -2<CR>", ns_opt)
 -- 打开大纲预览
 map("n", "<leader>2", "<cmd>Vista!!<CR>", ns_opt)
 
-map("n", "<C-p>", "<cmd> :Telescope find_files <CR>")
+-- map("n", "<C-p>", "<cmd> :Telescope find_files <CR>", ns_opt)
+
+-- 搜索并跳转到单词
+map("n", "<leader>gw", "<cmd>HopWord<CR>", ns_opt)
+-- 搜索并跳转到行
+map("n", "<leader>gl", "<cmd>HopLine<CR>", ns_opt)
+-- 搜索并跳转到字符
+map("n", "<leader>gc", "<cmd>HopChar1<CR>", ns_opt)
 
 -- require("my autocmds file") or just declare them here
 
@@ -52,7 +59,7 @@ map("n", "<C-p>", "<cmd> :Telescope find_files <CR>")
 vim.u = {}
 -- 貌似不在 GUI 设置字体大小不生效
 -- vim.o.guifont="FantasqueSansMono Nerd Font:h16,CaskaydiaCove Nerd Font:h16"
-vim.o.guifont="FantasqueSansMono Nerd Font:h15"
+vim.o.guifont="FantasqueSansMono Nerd Font:h14"
 -- 高亮所在行
 vim.wo.cursorline = true
 vim.u.keymap = {
