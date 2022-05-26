@@ -4,12 +4,12 @@ return {
   ["goolord/alpha-nvim"] = {
     disable = false,
   },
-  ["akinsho/toggleterm.nvim"] = {
-    event = "BufRead",
-    config = function()
-      require "custom.plugins.configs.toggleterm"
-    end,
-  },
+  -- ["akinsho/toggleterm.nvim"] = {
+  --   event = "BufRead",
+  --   config = function()
+  --     require "custom.plugins.configs.toggleterm"
+  --   end,
+  -- },
   ["folke/which-key.nvim"] = {
     event = {"BufRead", "BufNewFile"},
     config = function()
