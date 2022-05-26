@@ -40,7 +40,7 @@ return {
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
-      require("custom.plugins.configs.null-ls").setup()
+      require "custom.plugins.configs.null-ls"
     end,
   },
   ["nvim-telescope/telescope-media-files.nvim"] = {
