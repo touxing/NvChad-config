@@ -1,9 +1,16 @@
-local null_ls = require "null-ls"
+local status, null_ls = pcall(require, "null-ls")
+if not status then
+  vim.notify("not found null-ls")
+end
+
 local b = null_ls.builtins
 
 local sources = {
 
-  b.formatting.prettierd.with { filetypes = { "html", "markdown", "css" } },
+  b.formatting.prettierd.with {
+    filetypes = { "javascript", "typescript", "vue", "html", "markdown", "css", "scll", "less", "json", "yaml" },
+    prefer_local = "node_modules/.bin"
+  },
   b.formatting.deno_fmt,
 
   -- Lua
