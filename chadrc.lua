@@ -11,13 +11,6 @@ M.ui = {
 }
 
 M.plugins = {
-  user = userPlugins,
-  override = {
-   ["feline-nvim/feline.nvim"] = {
-     config = function()
-       require "custom.plugins.configs.feline"
-     end
-   }
-  }
+  user = userPlugins
 }
 return M
