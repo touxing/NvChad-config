@@ -1,6 +1,6 @@
 -- example file i.e lua/custom/init.lua
 -- MAPPINGS
-local map = nvchad.map
+local map = vim.keymap.set
 local ns_opt = {noremap = true, silent = true}
 
 map("n", "<leader>cc", ":Telescope <CR>", ns_opt)
