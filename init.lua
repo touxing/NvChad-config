@@ -46,12 +46,15 @@ map("n", "<leader>2", "<cmd>Vista!!<CR>", ns_opt)
 -- 搜索文件
 map("n", "<C-p>", "<cmd> :Telescope find_files <CR>", ns_opt)
 
+-- 格式化
+map("n", "<leader>fm", ":lua vim.lsp.buf.formatting_sync()<CR>")
+
 -- 搜索并跳转到单词
-map("n", "<leader>gw", "<cmd>HopWord<CR>", ns_opt)
+-- map("n", "<leader>gw", "<cmd>HopWord<CR>", ns_opt)
 -- 搜索并跳转到行
-map("n", "<leader>gl", "<cmd>HopLine<CR>", ns_opt)
+-- map("n", "<leader>gl", "<cmd>HopLine<CR>", ns_opt)
 -- 搜索并跳转到字符
-map("n", "<leader>gc", "<cmd>HopChar1<CR>", ns_opt)
+-- map("n", "<leader>gc", "<cmd>HopChar1<CR>", ns_opt)
 
 -- require("my autocmds file") or just declare them here
 

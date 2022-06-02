@@ -10,12 +10,12 @@ return {
   --     require "custom.plugins.configs.toggleterm"
   --   end,
   -- },
-  ["folke/which-key.nvim"] = {
-    event = { "BufRead", "BufNewFile" },
-    config = function()
-      require "custom.plugins.configs.which-key"
-    end,
-  },
+  -- ["folke/which-key.nvim"] = {
+  --   event = { "BufRead", "BufNewFile" },
+  --   config = function()
+  --     require "custom.plugins.configs.which-key"
+  --   end,
+  -- },
   ["ur4ltz/surround.nvim"] = {
     event = { "BufRead", "BufNewFile" },
     config = function()
@@ -38,12 +38,12 @@ return {
       require "custom.plugins.configs.vista"
     end,
   },
-  -- ["jose-elias-alvarez/null-ls.nvim"] = {
-  --   after = "nvim-lspconfig",
-  --   config = function()
-  --     require "custom.plugins.configs.null-ls"
-  --   end,
-  -- },
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.configs.null-ls"
+    end,
+  },
   ["nvim-telescope/telescope-media-files.nvim"] = {
     after = "telescope.nvim",
     config = function()
