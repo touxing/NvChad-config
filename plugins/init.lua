@@ -22,17 +22,16 @@ return {
       require "custom.plugins.configs.surround"
     end,
   },
-  -- 配置无效，暂时注释掉
-  -- ["phaazon/hop.nvim"] = {
-  --   cmd = {
-  --     "HopWord",
-  --     "HopLine",
-  --     "HopChar1"
-  --   },
-  --   config = function()
-  --     require "custom.plugins.configs.hop"
-  --   end,
-  -- },
+  ["phaazon/hop.nvim"] = {
+    cmd = {
+      "HopWord",
+      "HopLine",
+      "HopChar1"
+    },
+    config = function()
+      require "custom.plugins.configs.hop"
+    end,
+  },
   ["liuchengxu/vista.vim"] = {
     config = function()
       require "custom.plugins.configs.vista"
