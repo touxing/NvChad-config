@@ -7,7 +7,7 @@ local userPlugins = require "custom.plugins"
 -- example of changing theme:
 
 M.ui = {
-   theme = "gruvchad",
+   theme = "gruvbox",
 }
 
 M.plugins = {
