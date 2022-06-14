@@ -56,6 +56,13 @@ map("n", "<leader>gl", "<cmd>HopLine<CR>", ns_opt)
 -- 搜索并跳转到字符
 map("n", "<leader>gc", "<cmd>HopChar1<CR>", ns_opt)
 
+-- 全项目替换
+map("n", "<leader>rp", "<cmd>lua require('spectre').open()<cr>", ns_opt)
+-- 当前文件替换
+map("n", "<leader>rf", "viw:lua require('spectre').open_file_search()<cr>", ns_opt)
+-- 当前选中替换
+map("n", "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", ns_opt)
+
 -- require("my autocmds file") or just declare them here
 
 

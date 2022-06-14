@@ -43,6 +43,13 @@ return {
       require "custom.plugins.configs.null-ls"
     end,
   },
+  -- 全局替换
+  ["nvim-pack/nvim-spectre"] = {
+    after = { "plenary.nvim" },
+    config = function()
+      require "custom.plugins.configs.nvim-spectre"
+    end,
+  },
   ["nvim-telescope/telescope-media-files.nvim"] = {
     after = "telescope.nvim",
     config = function()
