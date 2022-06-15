@@ -60,7 +60,7 @@ map("n", "<leader>gc", "<cmd>HopChar1<CR>", ns_opt)
 map("n", "<leader>rp", "<cmd>lua require('spectre').open()<cr>", ns_opt)
 -- 当前文件替换
 map("n", "<leader>rf", "viw:lua require('spectre').open_file_search()<cr>", ns_opt)
--- 当前选中替换
+-- 全项目中搜索当前单词
 map("n", "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", ns_opt)
 
 -- require("my autocmds file") or just declare them here
