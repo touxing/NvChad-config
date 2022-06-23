@@ -47,7 +47,7 @@ map("n", "<leader>2", "<cmd>Vista!!<CR>", ns_opt)
 map("n", "<C-p>", "<cmd> :Telescope find_files <CR>", ns_opt)
 
 -- 格式化
-map("n", "<leader>fm", ":lua vim.lsp.buf.formatting_sync()<CR>")
+map("n", "<leader>fm", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>")
 
 -- 搜索并跳转到单词
 map("n", "<leader>gw", "<cmd>HopWord<CR>", ns_opt)
@@ -59,7 +59,7 @@ map("n", "<leader>gc", "<cmd>HopChar1<CR>", ns_opt)
 -- 全项目替换
 map("n", "<leader>rp", "<cmd>lua require('spectre').open()<cr>", ns_opt)
 -- 当前文件替换
-map("n", "<leader>rf", "viw:lua require('spectre').open_file_search()<cr>", ns_opt)
+map("n", "<leader>rf", "<cmd>lua require('spectre').open_file_search()<cr>", ns_opt)
 -- 全项目中搜索当前单词
 map("n", "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", ns_opt)
 
@@ -87,6 +87,6 @@ vim.cmd(
     " 关联文件类型
     autocmd BufRead,BufNewFile *.wxml set filetype=html
     autocmd BufRead,BufNewFile *.wxss set filetype=css
-    autocmd BufRead,BufNewFile *.ts,*.tsx,*.jsx set filetype=typesCRipt
+    autocmd BufRead,BufNewFile *.ts,*.tsx,*.jsx set filetype=typescript
   ]]
 )
