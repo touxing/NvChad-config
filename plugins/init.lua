@@ -63,5 +63,11 @@ return {
       }
       require("telescope").load_extension "media_files"
     end,
-  }
+  },
+  -- 增强 comment plugin 注释功能，支持 vue jsx等文件的嵌套注释
+  ["JoosepAlviste/nvim-ts-context-commentstring"] = {
+    config = function()
+      require "custom.plugins.configs.commentstring"
+    end,
+  },
 }

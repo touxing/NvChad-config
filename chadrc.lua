@@ -39,6 +39,16 @@ M.plugins = {
         require "custom.plugins.configs.bufferline"
       end
     },
+    ["nvim-treesitter/nvim-treesitter"] = {
+      config = function()
+        require "custom.plugins.configs.commentstring"
+      end
+    },
+    ["numToStr/Comment.nvim"] = {
+      config = function()
+        require "custom.plugins.configs.comment"
+      end
+    },
   }
 }
 return M
