@@ -7,10 +7,17 @@ local userPlugins = require "custom.plugins"
 -- example of changing theme:
 
 M.ui = {
-   theme = "gruvbox",
+  theme = "gruvbox",
 }
 
 M.plugins = {
-  user = userPlugins
+  user = userPlugins,
+  override = {
+    ["akinsho/bufferline.nvim"] = {
+      config = function()
+        require "custom.plugins.configs.bufferline"
+      end
+    },
+  }
 }
 return M
