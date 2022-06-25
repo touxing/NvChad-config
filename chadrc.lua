@@ -33,6 +33,9 @@ M.ui = {
 
 M.plugins = {
   user = userPlugins,
+  remove = {
+    -- "numToStr/Comment.nvim",
+  },
   override = {
     ["akinsho/bufferline.nvim"] = {
       config = function()
@@ -40,15 +43,29 @@ M.plugins = {
       end
     },
     ["nvim-treesitter/nvim-treesitter"] = {
+      ensure_installed = {
+        "c",
+        "cpp",
+        "lua",
+        "vim",
+        "javascript",
+        "html",
+        "css",
+      },
+      compilers = {"clang"},
+      context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+      },
       config = function()
-        require "custom.plugins.configs.commentstring"
+        return "custom.plugins.configs.treesitter"
       end
     },
     ["numToStr/Comment.nvim"] = {
       config = function()
-        require "custom.plugins.configs.comment"
-      end
-    },
-  }
+        return "custom.plugins.configs.comment"
+      end,
+    }
+  },
 }
 return M

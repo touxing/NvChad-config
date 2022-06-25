@@ -67,7 +67,33 @@ return {
   -- 增强 comment plugin 注释功能，支持 vue jsx等文件的嵌套注释
   ["JoosepAlviste/nvim-ts-context-commentstring"] = {
     config = function()
-      require "custom.plugins.configs.commentstring"
+
     end,
   },
+  -- ["terrortylor/nvim-comment"] = {
+  --   config = function()
+  --     require('nvim_comment').setup({
+  --       hook = function()
+  --         require("ts_context_commentstring.internal").update_commentstring()
+  --       end,
+  --     })
+  --   end
+  -- },
+  -- ["echasnovski/mini.nvim"] = {
+  --   branch = "stable",
+  --   config = function()
+  --     require('mini.comment').setup({
+  --       hooks = {
+  --         pre = function()
+  --           require('ts_context_commentstring.internal').update_commentstring()
+  --         end,
+  --       },
+  --     })
+  --   end
+  -- },
+  --[[ ["b3nj5m1n/kommentary"] = {
+    config = function()
+      require "custom.plugins.configs.kommentary"
+    end
+  } ]]
 }

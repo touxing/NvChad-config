@@ -1,9 +1,8 @@
 local present, comment = pcall(require, 'Comment')
+
 if not present then
   return "Not Found Comment"
 end
-
-require('commentstring')
 
 comment.setup {
   pre_hook = function(ctx)
