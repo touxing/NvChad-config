@@ -1,15 +1,32 @@
 -- custom/plugins/init.lua
+local overrides = require "custom.overrides"
 
 return {
   ["goolord/alpha-nvim"] = {
     disable = false,
   },
+
+   -- overrde plugin configs
+  ["nvim-treesitter/nvim-treesitter"] = {
+    override_options = overrides.treesitter,
+  },
+
+
+  ["williamboman/mason.nvim"] = {
+    override_options = overrides.mason,
+  },
+
+  ["kyazdani42/nvim-tree.lua"] = {
+    override_options = overrides.nvimtree,
+  },
+
   -- ["akinsho/toggleterm.nvim"] = {
   --   event = "BufRead",
   --   config = function()
   --     require "custom.plugins.configs.toggleterm"
   --   end,
   -- },
+  -- Nvchad已提供
   -- ["folke/which-key.nvim"] = {
   --   event = { "BufRead", "BufNewFile" },
   --   config = function()
